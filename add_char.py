@@ -16,7 +16,7 @@ with open (path, 'r+') as plain_text:
 # print(final_numbers)
 
 # ---- writing new text to a file
-path2 = '/Users/vusal/Desktop/Office/scripts/files1.timestamp'
+path2 = './files1.timestamp'
 with open (path2, 'w') as output_file:
     for l in final_numbers:
         output_file.write(l)

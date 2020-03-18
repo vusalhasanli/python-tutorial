@@ -82,5 +82,5 @@
 #nested dicts
 # users = { 
 #     1: { "name": "Vusal", "email": "mail@vhasanov.com"},
-#     2: { "name": "Vendetta", "email": "vforvendetta"}        
+#     2: { "name": "Vendetta", "email": "vforvendetta@mail.com"}        
 #         }

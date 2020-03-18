@@ -2,8 +2,8 @@ import os
 
 
 
+# ---- Adding ids to each line of the text in a file
 path = './files.timestamp'
-
 with open (path, 'r+') as plain_text:
     numbers = plain_text.readlines()
     # print(numbers)
@@ -13,28 +13,10 @@ with open (path, 'r+') as plain_text:
         fin_numbers = str(frame_id) + ' ' + n
         frame_id +=1
         final_numbers += fin_numbers
-print(final_numbers)
+# print(final_numbers)
 
-
-
-
-
-# with open (path, 'w+') as old_file:
-#     old_file = open(path, 'w+')
-#     n = plain_text.write(final_numbers)
-
-    
-
-
-        
-
-
-
-
-    # frame_id = '0'
-    # second = chr(ord(frame_id[0])+1)
-    # print(type(second))
-# add_id = frame_id + ' ' + n
-#         frame_id = chr(ord(frame_id[0])+1)
-#         final_numbers += add_id
-#     print(final_numbers)
+# ---- writing new text to a file
+path2 = '/Users/vusal/Desktop/Office/scripts/files1.timestamp'
+with open (path2, 'w') as output_file:
+    for l in final_numbers:
+        output_file.write(l)

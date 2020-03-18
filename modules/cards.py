@@ -1,6 +1,5 @@
 import random
 
-
 suits = ( "hearts", "diamonds", "clubs", "spades")
 cards = []
 values = range(1, 18)

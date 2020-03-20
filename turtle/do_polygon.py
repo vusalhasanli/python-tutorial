@@ -12,4 +12,4 @@ def do_polygon(size, side):
         turtle.lt(angle)
 
 
-do_polygon(150, 6)
+do_polygon(100, 8)

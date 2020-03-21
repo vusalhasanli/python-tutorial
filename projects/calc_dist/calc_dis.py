@@ -27,15 +27,21 @@ my_location = { "lat": 37.499376, "lon": -122.252775 }
 
 with open('./projects/calc_dist/meteor_data.json', 'r') as input_file:
     meteor_data = json.load(input_file)
-
     for meteor in meteor_data:
         if not ('reclat' in meteor and 'reclong' in meteor): continue
         meteor['distance'] = calc_dist(float(meteor['reclat']),
         float(meteor['reclong']), my_location['lat'], my_location['lon'])
-# print(meteor_data)
+# print(type(meteor_data))
+
+
+# ---------->> sort list by distance to find closest 10 cities
+    def get_dist(meteor):
+        return meteor.get('distance', math.inf)
+    meteor_data.sort(key=get_dist)
+    # print(meteor_data[0]['name'], meteor_data[0]['distance'])
 
 
 with open('./projects/calc_dist/meteor_data1.json', 'w') as output_file:
-    json.dump(meteor_data, output_file)
+    json.dump(meteor_data[0:10], output_file)
 
 
